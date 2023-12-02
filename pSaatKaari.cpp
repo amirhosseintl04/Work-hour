@@ -19,18 +19,30 @@
 
 int main(){
     
-    int date,startM,startH,starTotalM,endM,endH,total=0,extra=0,deficit=0,badLate=0,goodLate=0,goodHaste=0,badHaste=0,avrage;
+    int date,startM,startH,starTotalM,endM,endH,total=0,extra=0,deficit=0,badLate=0,goodLate=0,goodHaste=0,badHaste=0,avrage,month;
     int dates[2],startMs[2],startHs[2],endMs[2],endHs[2],totals[2];
+    system("CLS");
+    std::cout<<"Enter the working month: ";
+    std::cin>>month;
+    while(month<0 || month>12){
+        std::cout<<"The month you entered is not correct, try again: ";
+        std::cin>>month;
+    }
+    system("CLS");
+
     for (int i = 0; i < 2; i++)
     {
+        std::cout<<"Enter the date: "<<month<<" / ";
         std::cin>>date;
         dates[i]=date;
+        std::cout<<"Enter the start time: ";
         std::cin>>startH>>startM;
         if (startM>60){
             startM-=60;
             startH++;
         }
         startMs[i]=startM;startHs[i]=startH;
+        std::cout<<"Enter the end time: ";
         std::cin>>endH>>endM;
         if (endM>60){
             endM-=60;
