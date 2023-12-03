@@ -56,7 +56,7 @@ int main(){
         }else if(starTotalM>465){
             badLate+=(starTotalM-450);
         }
-        if (endM>15 && endM<30){
+        if (endM>=15 && endM<30){
             goodHaste+=30-endM;
         }else if(endM<15){
             badHaste+=30-endM;
