@@ -145,7 +145,7 @@ int main(){
         std::cout <<GREEN<< c<<RESET;
         usleep(2000);}
     std::cout<<mostCommonElement(endTotalMs)/60<<":"<<mostCommonElement(endTotalMs)%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
 //------------------------------------
     if (extra!=0)
     {
@@ -154,7 +154,7 @@ int main(){
             std::cout <<CYAN<< c<<RESET;
             usleep(2000);}
         std::cout<<extra/60<<':'<<extra%60<<"\n";
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
     }    
 //----------------------------------
     if (badLate!=0)
@@ -164,7 +164,7 @@ int main(){
             std::cout <<RED<< c<<RESET;
             usleep(2000);}
         std::cout<<badLate/60<<':'<<badLate%60<<"\n";
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
     }
 //-------------------------------
     if (goodLate!=0)
@@ -184,7 +184,7 @@ int main(){
             std::cout <<CYAN<< c<<RESET;
             usleep(2000);}
         std::cout<<deficit/60<<':'<<deficit%60<<'\n';
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
     } 
 //-------------------------------------
     if (goodHaste!=0)
@@ -194,7 +194,7 @@ int main(){
             std::cout <<BLUE<< c<<RESET;
             usleep(2000);}
         std::cout<<goodHaste/60<<':'<<goodHaste%60<<'\n';
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
     }  
 // ---------------------------------------------------
     if (badHaste!=0)
@@ -212,14 +212,14 @@ int main(){
         std::cout <<YELLOW<< c<<RESET;
         usleep(2000);}
     std::cout<<total/60<<':'<<total%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
 // ----------------------------------
     //std::cout<<"avrage:     "<<(total/2)/60<<':'<<(total/2)%60<<"\n";
     for (char c : "Avrage working hours per day:   ") {
         std::cout <<GRAY<< c<<RESET;
         usleep(2000);}
     std::cout<<(total/2)/60<<':'<<(total/2)%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // -------------------------------
     //std::cout<<"lowest worktime in day: "<<lowDate<<" with timework:     "<<min/60<<':'<<min%60<<"\n";
     for (char c : "Minimum working hours in day ") {
@@ -230,7 +230,7 @@ int main(){
         std::cout <<MAGENTA<< c<<RESET;
         usleep(2000);}
     std::cout<<min/60<<':'<<min%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // ----------------------
     //std::cout<<"upest worktime in day: "<<upDate<<" with timework:     "<<max/60<<':'<<max%60<<"\n";
     for (char c : "Maximum working hours in day ") {
@@ -241,7 +241,7 @@ int main(){
         std::cout <<MAGENTA<< c<<RESET;
         usleep(2000);}
     std::cout<<max/60<<':'<<max%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 //===========================================
     system("pause");
     return 0;
