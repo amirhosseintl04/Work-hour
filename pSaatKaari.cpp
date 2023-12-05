@@ -32,9 +32,10 @@
 
 int main(){
     //Initialize
+    int n=30;
     int date,startM,startH,endM,endH,total=0,extra=0,deficit=0,badLate=0,goodLate=0,goodHaste=0,badHaste=0,avrage,month;
-    //int startMs[30],startHs[30],endMs[30],endHs[30];
-    int dates[30],totals[30],endTotalMs[30],startTotalMs[30];
+    //int startMs[n],startHs[n],endMs[n],endHs[n];
+    int dates[n],totals[n],endTotalMs[n],startTotalMs[n];
     
     //cleans the terminal
     system("CLS");
@@ -62,7 +63,8 @@ int main(){
         std::cin>>date;
     } while (date>30);
     system("CLS");
-    for (int i = 0; i < 30; i++){   
+
+    for (int i = 0; i < n; i++){   
         usleep(200000);
         for (char c : "Today is the day: ") {
             std::cout <<GREEN<< c<<RESET;
@@ -130,7 +132,7 @@ int main(){
     //-----Maximum working hours-----------
         int upDate=dates[0];
         int max=totals[0];
-        for(int i=0; i<30; i++ ){
+        for(int i=0; i<n; i++ ){
             if(totals[i]>max){
                 max=totals[i];
                 upDate=dates[i];
@@ -139,7 +141,7 @@ int main(){
     //-----Minimum working hours---------------
         int lowDate=dates[0];
         int min=totals[0];
-        for(int i=0; i<30; i++ ){
+        for(int i=0; i<n; i++ ){
             if(totals[i]<min){
                 min=totals[i];
                 lowDate=dates[i];
@@ -228,11 +230,11 @@ int main(){
     std::cout<<total/60<<':'<<total%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // ----------------------------------
-    //std::cout<<"avrage:     "<<(total/30)/60<<':'<<(total/30)%60<<"\n";
+    //std::cout<<"avrage:     "<<(total/n)/60<<':'<<(total/n)%60<<"\n";
     for (char c : "Avrage working hours per day:   ") {
         std::cout <<GRAY<< c<<RESET;
         usleep(2000);}
-    std::cout<<(total/30)/60<<':'<<(total/30)%60<<'\n';
+    std::cout<<(total/n)/60<<':'<<(total/n)%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // -------------------------------
     //std::cout<<"lowest worktime in day: "<<lowDate<<" with timework:     "<<min/60<<':'<<min%60<<"\n";
