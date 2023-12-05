@@ -105,12 +105,12 @@ int main(){
         endTotalMs[i]= endM+(endH*60);
 
     //-----Allowed and not allowed delay-----------
-        
-        if (startTotalMs[i]<465 && startM>450){
-            goodLate+=(startTotalMs[i]-450);
-        }else if(startTotalMs[i]>465){
-            badLate+=(startTotalMs[i]-450);
-        }
+        if(startH==7)
+            if (startM<=45 && startM>30){
+                goodLate+=(startM-30);
+            }else if(startM>45){
+                badLate+=(startM-30);
+            }
     //-----Allowed and not allowed haste-----------    
         if(endH==15){
             if (endM>=15 && endM<30){
