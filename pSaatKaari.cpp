@@ -148,20 +148,20 @@ int main(){
             }
         }
 //================outputs==================   
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';    
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';    
     //std::cout<<"most time start:  "<<mostCommonElement(startHs)<<":"<<mostCommonElement(startMs)<<'\n';
     for (char c : "Usual start time:   ") {
         std::cout << GREEN <<c<< RESET;
         usleep(2000);}
     std::cout<<mostCommonElement(startTotalMs)/60<<":"<<mostCommonElement(startTotalMs)%60<<'\n';
-    std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 //------------------------------------
     // std::cout<<"most time end:  "<<mostCommonElement(endHs)<<":"<<mostCommonElement(endMs)<<'\n';
     for (char c : "Usual end time:   ") {
         std::cout <<GREEN<< c<<RESET;
         usleep(2000);}
     std::cout<<mostCommonElement(endTotalMs)/60<<":"<<mostCommonElement(endTotalMs)%60<<'\n';
-    std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 //------------------------------------
     if (extra!=0)
     {
@@ -170,7 +170,7 @@ int main(){
             std::cout <<CYAN<< c<<RESET;
             usleep(2000);}
         std::cout<<extra/60<<':'<<extra%60<<"\n";
-        std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     }    
 //----------------------------------
     if (badLate!=0)
@@ -180,7 +180,7 @@ int main(){
             std::cout <<RED<< c<<RESET;
             usleep(2000);}
         std::cout<<badLate/60<<':'<<badLate%60<<"\n";
-        std::cout<<WHITE<<"-------------------------------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     }
 //-------------------------------
     if (goodLate!=0)
@@ -190,7 +190,7 @@ int main(){
             std::cout <<BLUE<< c<<RESET;
             usleep(2000);}
         std::cout<<goodLate/60<<':'<<goodLate%60<<"\n";
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     }    
 //------------------------------------
     if (deficit!=0)
@@ -200,7 +200,7 @@ int main(){
             std::cout <<CYAN<< c<<RESET;
             usleep(2000);}
         std::cout<<deficit/60<<':'<<deficit%60<<'\n';
-        std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     } 
 //-------------------------------------
     if (goodHaste!=0)
@@ -210,7 +210,7 @@ int main(){
             std::cout <<BLUE<< c<<RESET;
             usleep(2000);}
         std::cout<<goodHaste/60<<':'<<goodHaste%60<<'\n';
-        std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     }  
 // ---------------------------------------------------
     if (badHaste!=0)
@@ -220,7 +220,7 @@ int main(){
             std::cout <<RED<< c<<RESET;
             usleep(2000);}
         std::cout<<badHaste/60<<':'<<badHaste%60<<'\n';
-        std::cout<<WHITE<<"------------------------"<<RESET<<'\n';
+        std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
     }
 // ------------------------------------
     //std::cout<<"total:      "<<total/60<<':'<<total%60<<"\n";
@@ -228,7 +228,7 @@ int main(){
         std::cout <<YELLOW<< c<<RESET;
         usleep(2000);}
     std::cout<<total/60<<':'<<total%60<<'\n';
-    std::cout<<WHITE<<"--------------------------------------"<<RESET<<'\n';
+    std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // ----------------------------------
     //std::cout<<"avrage:     "<<(total/3)/60<<':'<<(total/3)%60<<"\n";
     for (char c : "Avrage working hours per day:   ") {
