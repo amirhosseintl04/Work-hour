@@ -5,9 +5,9 @@
     int mostCommonElement(int arr[]){  
         int max = 0; 
         int commonElement; 
-        for (int i = 0; i < 3; i++) { 
+        for (int i = 0; i < 30; i++) { 
             int count = 0; 
-            for (int j = 0; j < 3; j++) { 
+            for (int j = 0; j < 30; j++) { 
                 if (arr[i] == arr[j]) 
                     count++; 
             } 
@@ -32,9 +32,10 @@
 
 int main(){
     //Initialize
+    int n=30;
     int date,startM,startH,endM,endH,total=0,extra=0,deficit=0,badLate=0,goodLate=0,goodHaste=0,badHaste=0,avrage,month;
-    //int startMs[3],startHs[3],endMs[3],endHs[3];
-    int dates[3],totals[3],endTotalMs[3],startTotalMs[3];
+    //int startMs[n],startHs[n],endMs[n],endHs[n];
+    int dates[n],totals[n],endTotalMs[n],startTotalMs[n];
     
     //cleans the terminal
     system("CLS");
@@ -54,7 +55,7 @@ int main(){
     }
     system("CLS");
 
-    for (int i = 0; i < 3; i++){   
+    for (int i = 0; i < n; i++){   
         usleep(200000);
         for (char c : "Enter the date: ") {
             std::cout <<GREEN<< c<<RESET;
@@ -132,7 +133,7 @@ int main(){
     //-----Maximum working hours-----------
         int upDate=dates[0];
         int max=totals[0];
-        for(int i=0; i<3; i++ ){
+        for(int i=0; i<n; i++ ){
             if(totals[i]>max){
                 max=totals[i];
                 upDate=dates[i];
@@ -141,7 +142,7 @@ int main(){
     //-----Minimum working hours---------------
         int lowDate=dates[0];
         int min=totals[0];
-        for(int i=0; i<3; i++ ){
+        for(int i=0; i<n; i++ ){
             if(totals[i]<min){
                 min=totals[i];
                 lowDate=dates[i];
@@ -230,11 +231,11 @@ int main(){
     std::cout<<total/60<<':'<<total%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // ----------------------------------
-    //std::cout<<"avrage:     "<<(total/3)/60<<':'<<(total/3)%60<<"\n";
+    //std::cout<<"avrage:     "<<(total/n)/60<<':'<<(total/n)%60<<"\n";
     for (char c : "Avrage working hours per day:   ") {
         std::cout <<GRAY<< c<<RESET;
         usleep(2000);}
-    std::cout<<(total/3)/60<<':'<<(total/3)%60<<'\n';
+    std::cout<<(total/n)/60<<':'<<(total/n)%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // -------------------------------
     //std::cout<<"lowest worktime in day: "<<lowDate<<" with timework:     "<<min/60<<':'<<min%60<<"\n";
