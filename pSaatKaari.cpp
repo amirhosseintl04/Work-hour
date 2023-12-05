@@ -5,9 +5,9 @@
     int mostCommonElement(int arr[]){  
         int max = 0; 
         int commonElement; 
-        for (int i = 0; i < 3; i++) { 
+        for (int i = 0; i < 30; i++) { 
             int count = 0; 
-            for (int j = 0; j < 3; j++) { 
+            for (int j = 0; j < 30; j++) { 
                 if (arr[i] == arr[j]) 
                     count++; 
             } 
@@ -33,8 +33,8 @@
 int main(){
     //Initialize
     int date,startM,startH,endM,endH,total=0,extra=0,deficit=0,badLate=0,goodLate=0,goodHaste=0,badHaste=0,avrage,month;
-    //int startMs[3],startHs[3],endMs[3],endHs[3];
-    int dates[3],totals[3],endTotalMs[3],startTotalMs[3];
+    //int startMs[30],startHs[30],endMs[30],endHs[30];
+    int dates[30],totals[30],endTotalMs[30],startTotalMs[30];
     
     //cleans the terminal
     system("CLS");
@@ -52,31 +52,29 @@ int main(){
             usleep(20000);}
         std::cin>>month;
     }
-    system("CLS");
-
-    for (int i = 0; i < 3; i++){   
-        usleep(200000);
-        for (char c : "Enter the date: ") {
+    do
+    {
+        for (char c : "Enter the first day: ") {
             std::cout <<GREEN<< c<<RESET;
             usleep(20000);}
         std::cout<<month<<" / ";
         //std::cout<<"Enter the date: "<<month<<" / ";
         std::cin>>date;
-        for (int k = 0; k < i; k++){
-            while (dates[k]==date){
-                for (char c : "This day has already been entered. Try again: ") {
-                    std::cout <<RED<< c<<RESET;
-                    usleep(20000);}
-                std::cout<<month<<" / ";
-                std::cin>>date;
-                k=0;
-            } 
-        }
-        if (date+1>30)
+    } while (date>30);
+    system("CLS");
+    for (int i = 0; i < 30; i++){   
+        usleep(200000);
+        for (char c : "Today is the day: ") {
+            std::cout <<GREEN<< c<<RESET;
+            usleep(20000);}
+        std::cout<<month<<" / "<<date<<"\n";
+        dates[i]=date;
+        date++;
+        if (date+1>31)
         {
             month++;
+            date=1;
         }
-        dates[i]=date;
     //-----inputs start time----------------
         for (char c : "Enter the start time: ") {
         std::cout <<LBLUE<< c<<RESET;
@@ -127,12 +125,12 @@ int main(){
         }else if(totals[i]<480){
             deficit+=(480-totals[i]);
         }
-        system("CLS");
+       system("CLS");
     }
     //-----Maximum working hours-----------
         int upDate=dates[0];
         int max=totals[0];
-        for(int i=0; i<3; i++ ){
+        for(int i=0; i<30; i++ ){
             if(totals[i]>max){
                 max=totals[i];
                 upDate=dates[i];
@@ -141,7 +139,7 @@ int main(){
     //-----Minimum working hours---------------
         int lowDate=dates[0];
         int min=totals[0];
-        for(int i=0; i<3; i++ ){
+        for(int i=0; i<30; i++ ){
             if(totals[i]<min){
                 min=totals[i];
                 lowDate=dates[i];
@@ -230,11 +228,11 @@ int main(){
     std::cout<<total/60<<':'<<total%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // ----------------------------------
-    //std::cout<<"avrage:     "<<(total/3)/60<<':'<<(total/3)%60<<"\n";
+    //std::cout<<"avrage:     "<<(total/30)/60<<':'<<(total/30)%60<<"\n";
     for (char c : "Avrage working hours per day:   ") {
         std::cout <<GRAY<< c<<RESET;
         usleep(2000);}
-    std::cout<<(total/3)/60<<':'<<(total/3)%60<<'\n';
+    std::cout<<(total/30)/60<<':'<<(total/30)%60<<'\n';
     std::cout<<WHITE<<"--------------------------------------------------------------"<<RESET<<'\n';
 // -------------------------------
     //std::cout<<"lowest worktime in day: "<<lowDate<<" with timework:     "<<min/60<<':'<<min%60<<"\n";
